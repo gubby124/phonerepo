@@ -1,0 +1,61 @@
+name: Build Docky
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - ".github/workflows/build-docky.yml"
+      - "Docky/**"
+      - "tools/update_repo_metadata.py"
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: macos-14
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Select Xcode
+        run: |
+          sudo xcode-select -s /Applications/Xcode.app/Contents/Developer
+          xcodebuild -version
+
+      - name: Install Theos
+        run: |
+          export THEOS="$HOME/theos"
+          bash -c "$(curl -fsSL https://raw.githubusercontent.com/theos/theos/master/bin/install-theos)"
+          echo "THEOS=$THEOS" >> "$GITHUB_ENV"
+
+      - name: Build Docky package
+        working-directory: Docky
+        run: |
+          export THEOS="$HOME/theos"
+          make clean
+          make package FINALPACKAGE=1 TARGET=iphone:clang:latest:11.0
+
+      - name: Copy Docky deb
+        run: |
+          mkdir -p debs
+          cp Docky/packages/*.deb debs/
+          ls -lh debs/*docky*.deb
+
+      - name: Regenerate Sileo metadata
+        run: |
+          python3 tools/update_repo_metadata.py --output . --repo-url "https://gubby124.github.io/phonerepo/" --mirror-docs
+
+      - name: Commit built package
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add debs docs/debs Packages Packages.gz Packages.bz2 Release index.html .nojekyll docs/Packages docs/Packages.gz docs/Packages.bz2 docs/Release docs/index.html docs/.nojekyll
+          if git diff --cached --quiet; then
+            echo "No package changes to commit."
+          else
+            git commit -m "Build Docky package"
+            git push
+          fi
