@@ -157,10 +157,10 @@ Architecture: iphoneos-arm
 Version: 0.1.0
 Installed-Size: 172
 Filename: debs/me.nepeta.docky_0.1.0_iphoneos-arm.deb
-Size: 32560
-MD5sum: 2a5c65b43d7ed227c57379a0146807e2
-SHA1: c959af322639e1dc27df2aaa23cb384463735792
-SHA256: 0720266ca39663a153e3899927c4c054994786eb4b5060d80cdea443b7495389
+Size: 32558
+MD5sum: cadd9e13dd1e8a68649ae24897fe6add
+SHA1: 533b90c1143c219767e5962b8680b41f12541429
+SHA256: f11eb276500456d356b8ed1f5e7846297d2c94af45c9161f1125a1bf99ca42bd
 
 Package: me.nepeta.exo
 Name: Exo (Beta)
