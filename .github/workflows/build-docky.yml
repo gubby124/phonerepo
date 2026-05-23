@@ -36,30 +36,46 @@ jobs:
           echo "THEOS=$THEOS" >> "$GITHUB_ENV"
 
       - name: Build Docky package
+        id: build_docky
         working-directory: Docky
         run: |
+          set +e
           export THEOS="$HOME/theos"
-          make clean
-          make package FINALPACKAGE=1 TARGET=iphone:clang:latest:11.0
+          make clean 2>&1 | tee ../docky-build.log
+          make package FINALPACKAGE=1 TARGET=iphone:clang:latest:11.0 2>&1 | tee -a ../docky-build.log
+          status=${PIPESTATUS[0]}
+          echo "status=$status" >> "$GITHUB_OUTPUT"
+          exit 0
 
-      - name: Copy Docky deb
+      - name: Copy build result
         run: |
+          mkdir -p docs
+          cp docky-build.log docs/docky-build.log
+          if [ "${{ steps.build_docky.outputs.status }}" != "0" ]; then
+            echo "Docky build failed; committed log will show the compiler error."
+            exit 0
+          fi
           mkdir -p debs
           cp Docky/packages/*.deb debs/
           ls -lh debs/*docky*.deb
 
       - name: Regenerate Sileo metadata
+        if: steps.build_docky.outputs.status == '0'
         run: |
           python3 tools/update_repo_metadata.py --output . --repo-url "https://gubby124.github.io/phonerepo/" --mirror-docs
 
-      - name: Commit built package
+      - name: Commit built package or build log
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add debs docs/debs Packages Packages.gz Packages.bz2 Release index.html .nojekyll docs/Packages docs/Packages.gz docs/Packages.bz2 docs/Release docs/index.html docs/.nojekyll
+          git add debs docs/debs Packages Packages.gz Packages.bz2 Release index.html .nojekyll docs/Packages docs/Packages.gz docs/Packages.bz2 docs/Release docs/index.html docs/.nojekyll docs/docky-build.log
           if git diff --cached --quiet; then
             echo "No package changes to commit."
           else
             git commit -m "Build Docky package"
             git push
           fi
+
+      - name: Fail if Docky did not build
+        if: steps.build_docky.outputs.status != '0'
+        run: exit 1
