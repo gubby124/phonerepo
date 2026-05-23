@@ -44,7 +44,7 @@ jobs:
           set +e
           export THEOS="$HOME/theos"
           make clean 2>&1 | tee ../docky-build.log
-          make package FINALPACKAGE=1 TARGET=iphone:clang:latest:11.0 ARCHS=arm64 2>&1 | tee -a ../docky-build.log
+          make package FINALPACKAGE=1 TARGET=iphone:clang:16.5:11.0 ARCHS=arm64 2>&1 | tee -a ../docky-build.log
           status=${PIPESTATUS[0]}
           echo "status=$status" >> "$GITHUB_OUTPUT"
           exit 0
