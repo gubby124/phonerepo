@@ -8,6 +8,7 @@ on:
     paths:
       - ".github/workflows/build-docky.yml"
       - "Docky/**"
+      - "IconState/**"
       - "tools/update_repo_metadata.py"
 
 permissions:
@@ -49,20 +50,38 @@ jobs:
           echo "status=$status" >> "$GITHUB_OUTPUT"
           exit 0
 
+      - name: Build IconState package
+        id: build_iconstate
+        working-directory: IconState
+        run: |
+          set +e
+          export THEOS="$HOME/theos"
+          make clean 2>&1 | tee ../iconstate-build.log
+          make package FINALPACKAGE=1 TARGET=iphone:clang:16.5:9.0 ARCHS=arm64 2>&1 | tee -a ../iconstate-build.log
+          status=${PIPESTATUS[0]}
+          echo "status=$status" >> "$GITHUB_OUTPUT"
+          exit 0
+
       - name: Copy build result
         run: |
           mkdir -p docs
           cp docky-build.log docs/docky-build.log
-          if [ "${{ steps.build_docky.outputs.status }}" != "0" ]; then
-            echo "Docky build failed; committed log will show the compiler error."
-            exit 0
-          fi
+          cp iconstate-build.log docs/iconstate-build.log
           mkdir -p debs
-          cp Docky/packages/*.deb debs/
-          ls -lh debs/*docky*.deb
+          if [ "${{ steps.build_docky.outputs.status }}" = "0" ]; then
+            cp Docky/packages/*.deb debs/
+            ls -lh debs/*docky*.deb
+          else
+            echo "Docky build failed; committed log will show the compiler error."
+          fi
+          if [ "${{ steps.build_iconstate.outputs.status }}" = "0" ]; then
+            cp IconState/packages/*.deb debs/
+            ls -lh debs/*iconstate*.deb
+          else
+            echo "IconState build failed; committed log will show the compiler error."
+          fi
 
       - name: Regenerate Sileo metadata
-        if: steps.build_docky.outputs.status == '0'
         run: |
           python3 tools/update_repo_metadata.py --output . --repo-url "https://gubby124.github.io/phonerepo/" --mirror-docs
 
@@ -87,9 +106,20 @@ jobs:
             echo '```text'
             tail -n 220 docky-build.log || true
             echo '```'
+            echo
+            echo "### IconState build status: ${{ steps.build_iconstate.outputs.status }}"
+            echo
+            echo '```text'
+            tail -n 220 iconstate-build.log || true
+            echo '```'
           } >> "$GITHUB_STEP_SUMMARY"
           if [ "${{ steps.build_docky.outputs.status }}" != "0" ]; then
             grep -E "error:|fatal error:|Undefined symbols|symbol\\(s\\) not found|framework not found|library not found|ld:|make\\[[0-9]+\\]: \\*\\*\\*" docky-build.log | tail -n 80 | while IFS= read -r line; do
+              echo "::error::$line"
+            done
+          fi
+          if [ "${{ steps.build_iconstate.outputs.status }}" != "0" ]; then
+            grep -E "error:|fatal error:|Undefined symbols|symbol\\(s\\) not found|framework not found|library not found|ld:|make\\[[0-9]+\\]: \\*\\*\\*" iconstate-build.log | tail -n 80 | while IFS= read -r line; do
               echo "::error::$line"
             done
           fi
