@@ -22,10 +22,11 @@ ld: warning: -multiply_defined is obsolete
 [0;32m==> [1;39mCompiling AppearanceSettings.m (arm64)…[m
 [0;33m==> [1;39mLinking bundle DockyPrefs (arm64)…[m
 ld: warning: -multiply_defined is obsolete
-ld: framework 'Preferences' not found
-clang: [0;1;31merror: [0m[1mlinker command failed with exit code 1 (use -v to see invocation)[0m
-make[4]: *** [/Users/runner/work/phonerepo/phonerepo/Docky/.theos/obj/arm64/DockyPrefs.bundle/DockyPrefs] Error 1
-make[3]: *** [/Users/runner/work/phonerepo/phonerepo/Docky/.theos/obj/arm64/DockyPrefs.bundle/DockyPrefs] Error 2
-make[2]: *** [internal-bundle-all_] Error 2
-make[1]: *** [DockyPrefs.all.bundle.variables] Error 2
-make: *** [internal-all] Error 2
+[0;34m==> [1;39mGenerating debug symbols for DockyPrefs…[m
+[0;34m==> [1;39mStripping DockyPrefs (arm64)…[m
+[0;34m==> [1;39mSigning DockyPrefs…[m
+[1;31m> [1;3;39mMaking stage in Tweak…[m
+[1;31m> [1;3;39mMaking stage for tweak Docky…[m
+[1;31m> [1;3;39mMaking stage in Prefs…[m
+[1;31m> [1;3;39mMaking stage for bundle DockyPrefs…[m
+dm.pl: building package `me.nepeta.docky:iphoneos-arm' in `./packages/me.nepeta.docky_0.1.0_iphoneos-arm.deb'

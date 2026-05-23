@@ -145,6 +145,23 @@ MD5sum: 5e2ce2412d73bfb38e5efc7a85bc418b
 SHA1: f5c3ccc6e60e13785e5f883260abef17213f64a3
 SHA256: 1df4a9a24d4c7dfdb898ce0156267af336b309d424ead72ccc3bb1be1cf87773
 
+Package: me.nepeta.docky
+Name: Docky
+Conflicts: me.nepeta.2dock, com.synnyg.floatydock, com.imkpatil.floatingdockplus, com.imkpatil.floatingdock, com.dgh0st.floatingdock, com.cabralcole.dockalpha, me.gmoran.fiveicondockxi, info.rpdev.betterfiveicondock, com.noisyflake.cleardock12, com.yourepo.cydiageek.shydock, com.noisyflake.moderndock, com.julioverne.cirdock11, com.daniel63194.colormydock
+Depends: mobilesubstrate, ws.hbang.common (>= 1.11), firmware (>= 11.0), me.nepeta.iconstate
+Description: Dock customizer
+Maintainer: Nepeta <ominousness@protonmail.com>
+Author: Nepeta <ominousness@protonmail.com>
+Section: Tweaks
+Architecture: iphoneos-arm
+Version: 0.1.0
+Installed-Size: 172
+Filename: debs/me.nepeta.docky_0.1.0_iphoneos-arm.deb
+Size: 32560
+MD5sum: 2a5c65b43d7ed227c57379a0146807e2
+SHA1: c959af322639e1dc27df2aaa23cb384463735792
+SHA256: 0720266ca39663a153e3899927c4c054994786eb4b5060d80cdea443b7495389
+
 Package: me.nepeta.exo
 Name: Exo (Beta)
 Depends: mobilesubstrate, firmware (>= 11.0)
