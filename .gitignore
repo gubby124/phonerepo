@@ -19,6 +19,9 @@ desktop.ini
 *.bz2
 *.xz
 !docs/debs/*.deb
+!debs/*.deb
+!Packages.bz2
+!docs/Packages.bz2
 
 # Theos/build outputs
 .theos/
