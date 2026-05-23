@@ -1,0 +1,51 @@
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Archives and package outputs
+*.deb
+*.ipa
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.bz2
+*.xz
+
+# Theos/build outputs
+.theos/
+obj/
+build/
+Build/
+DerivedData/
+LatestBuild/
+*.dSYM/
+
+# Xcode local user state
+xcuserdata/
+*.xcuserstate
+*.xccheckout
+
+# Dependency/build folders
+node_modules/
+vendor/
+
+# Local config/secrets
+.env
+.env.*
+config.php
+!.env.example
+!config.php.example
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

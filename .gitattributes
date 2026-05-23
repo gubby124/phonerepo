@@ -1,0 +1,27 @@
+* text=auto
+
+*.h text eol=lf
+*.m text eol=lf
+*.mm text eol=lf
+*.xm text eol=lf
+*.x text eol=lf
+*.c text eol=lf
+*.cpp text eol=lf
+*.js text eol=lf
+*.css text eol=lf
+*.php text eol=lf
+*.rb text eol=lf
+*.ex text eol=lf
+*.exs text eol=lf
+Makefile text eol=lf
+control text eol=lf
+
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.pdf binary
+*.odt binary
+*.car binary
+*.dylib binary
+*.tbd text eol=lf
