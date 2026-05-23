@@ -28,7 +28,11 @@ jobs:
       - name: Install Theos
         run: |
           export THEOS="$HOME/theos"
-          bash -c "$(curl -fsSL https://raw.githubusercontent.com/theos/theos/master/bin/install-theos)"
+          brew update || true
+          brew install ldid xz || true
+          git clone --recursive https://github.com/theos/theos.git "$THEOS"
+          mkdir -p "$THEOS/sdks"
+          curl -L "https://github.com/theos/sdks/releases/latest/download/iPhoneOS16.5.sdk.tar.xz" | tar -xJ -C "$THEOS/sdks"
           echo "THEOS=$THEOS" >> "$GITHUB_ENV"
 
       - name: Build Docky package
