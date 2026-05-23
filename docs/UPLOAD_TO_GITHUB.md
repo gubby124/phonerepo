@@ -1,32 +1,32 @@
-# Upload To GitHub
+# GitHub Pages Sileo Setup
 
-This folder is ready to push as a GitHub repository.
+This repository has already been pushed to GitHub and now contains static Sileo/Cydia repository files under `docs/`.
 
-## Option 1: GitHub Desktop
+## Enable GitHub Pages
 
-1. Open GitHub Desktop.
-2. Choose `File > Add local repository`.
-3. Select `D:\You\Documents\codex\nepsgit_github_repo`.
-4. Click `Publish repository`.
-5. Choose `Private` unless you are sure you want it public.
+1. Open `https://github.com/gubby124/phonerepo`.
+2. Go to `Settings`.
+3. Open `Pages`.
+4. Under `Build and deployment`, set `Source` to `Deploy from a branch`.
+5. Set `Branch` to `main`.
+6. Set the folder to `/docs`.
+7. Click `Save`.
 
-## Option 2: Command Line
+After GitHub finishes publishing, the Sileo source URL is:
 
-Create an empty GitHub repository first, then run:
-
-```powershell
-cd D:\You\Documents\codex\nepsgit_github_repo
-git remote add origin https://github.com/YOUR-USERNAME/nepsgit.git
-git branch -M main
-git push -u origin main
+```text
+https://gubby124.github.io/phonerepo/
 ```
 
-Replace `YOUR-USERNAME` with your GitHub username and replace `nepsgit` if you choose a different repository name.
+## Add In Sileo
 
-## If GitHub CLI Is Installed
+1. Open Sileo.
+2. Tap `Sources`.
+3. Tap `+`.
+4. Paste:
 
-```powershell
-cd D:\You\Documents\codex\nepsgit_github_repo
-gh auth login
-gh repo create nepsgit --private --source . --remote origin --push
+```text
+https://gubby124.github.io/phonerepo/
 ```
+
+5. Tap `Add Source`.

@@ -7,10 +7,21 @@ This repository is organized as a multi-project archive. Each top-level folder i
 ## Contents
 
 - `docs/PROJECTS.md` - generated index of the top-level projects and package metadata found in `control` files.
+- `docs/Packages`, `docs/Packages.gz`, and `docs/debs/` - static Sileo/Cydia repository files for GitHub Pages.
 - `PHPCyRepo/` - PHP Cydia repository web app.
 - `Zebra/` - iOS package manager app source.
 - `iOS-Blocks/` - iOS Blocks / Curago source and widget projects.
 - Other top-level folders - individual tweaks, libraries, and utilities.
+
+## Sileo Repo
+
+After GitHub Pages is enabled for `main` / `docs`, add this source in Sileo:
+
+```text
+https://gubby124.github.io/phonerepo/
+```
+
+The repo metadata is generated from package payload folders. Source-only tweaks still need to be compiled into `.deb` files before they can be added to the Sileo repo.
 
 ## Setup
 
@@ -34,4 +45,4 @@ For `PHPCyRepo/`, copy `config.php.example` to `config.php`, configure the datab
 
 ## Notes
 
-This is source-first GitHub structure. It is different from a YouRepo upload structure: YouRepo wants compiled `.deb` files or package-root zips with `DEBIAN/control`, while GitHub should usually store source code, documentation, and build scripts.
+This repository contains both source code and a static package repo under `docs/`.

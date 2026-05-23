@@ -18,6 +18,7 @@ desktop.ini
 *.tgz
 *.bz2
 *.xz
+!docs/debs/*.deb
 
 # Theos/build outputs
 .theos/

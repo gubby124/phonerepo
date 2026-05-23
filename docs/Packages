@@ -1,0 +1,237 @@
+Package: com.iosblocks.curago
+Name: iOS Blocks
+Version: 0.2.5-1
+Description: An integrated widget system, built for perfomance, and the reaction from people when they see it and be like "that's awesome bro, ETA???!!!!". And we reply, "Ayyyy lmao, nope", and they say "Fuck man, y u so cruel? Can i beta test?". And we reply, "Nah bro", and they say "But I'll pay?!!". And we don't reply, because ain't nobody got time fo' that.
+Section: System
+Depends: firmware (>= 7.0), mobilesubstrate, preferenceloader
+Conflicts: 
+Replaces: 
+Priority: optional
+Architecture: iphoneos-arm
+Author: Creatix & iOS Blocks Team
+dev: 
+Homepage: https://iosblocks.com
+Depiction: https://packix.ioscreatix.com/package/com.iosblocks.curago
+Maintainer: iOS Creatix
+Icon: file:///Library/PreferenceBundles/curago.bundle/curagoIcon@3x.png
+Filename: debs/com.iosblocks.curago_0.2.5-1_iphoneos-arm.deb
+Size: 3600
+MD5sum: 374f7e54b2913e5fdc1b17ecfcad710e
+SHA1: e4929f6e143e4a5be1067ca1a09d38adfd1be31c
+SHA256: 691d7f9db08d92a7ece67a1fd169a98a8e74b6ef86d96fd39982653a86cb29c7
+
+Package: com.iosblocks.curago
+Name: curago
+Version: 1.0-1
+Description: 
+Section: PreferenceBundles
+Depends: firmware (>= 5.0), mobilesubstrate, preferenceloader
+Conflicts: 
+Replaces: 
+Priority: optional
+Architecture: iphoneos-arm
+Author: Matt Clarke
+dev: 
+Homepage: 
+Depiction: 
+Maintainer: 
+Icon:
+Filename: debs/com.iosblocks.curago_1.0-1_iphoneos-arm.deb
+Size: 248700
+MD5sum: a7e12d1a5010b05fcbb9e279e3ffe2be
+SHA1: 1bda39f561f347fe93a2fa89b862c73f6feb536f
+SHA256: d5e1055a6b31782d0f1da602aadfa12442d36efdcef4a3c87b995d98ce9864df
+
+Package: com.julioverne.cydiaenable
+Name: Cydia Enable
+Author: julioverne
+Version: 3.2
+Depends: preferenceloader
+Architecture: iphoneos-arm
+Description: Enable any Tweaks in Cydia App!
+	Lets you to use any Tweak inside Cydia and iFile App!
+	
+	Configure options from Settings.
+	
+Homepage: http://twitter.com/ijulioverne
+Maintainer: Julio
+Section: Tweaks
+Icon: file:///Library/PreferenceBundles/CydiaEnable.bundle/Icon.png
+Filename: debs/com.julioverne.cydiaenable_3.2_iphoneos-arm.deb
+Size: 53402
+MD5sum: 602419a537239ccba4f23556cc6cf4b5
+SHA1: cfe49b96a5661844fce9511ec1b9ca3258b7145c
+SHA256: 830c1b05fd1a7b508453ec15f7fc11512e2a070c9cd0c437707b08922f421b1f
+
+Package: com.matchstic.BBCNews
+Name: BBCNews
+Version: 1.0-1
+Description: 
+Section: Addons (Curago)
+Depends: firmware (>= 7.0)
+Conflicts: 
+Replaces: 
+Priority: optional
+Architecture: iphoneos-arm
+Author: Matt Clarke
+dev: 
+Homepage: 
+Depiction: 
+Maintainer: 
+Icon:
+Filename: debs/com.matchstic.bbcnews_1.0-1_iphoneos-arm.deb
+Size: 410920
+MD5sum: 0ddf30808638cd3fdf836115bc25de5a
+SHA1: 07440b80062a16aa3a48c73c2b04d237bcf77e68
+SHA256: 52fb13150ad683f9f7234502a078aa243498030e0fd9114cce2c6da73da3bfaa
+
+Package: com.matchstic.IBKpostInst
+Name: IBKpostInst
+Version: 1.0-1
+Description: 
+Section: System
+Depends: firmware (>= 5.0)
+Conflicts: 
+Replaces: 
+Priority: optional
+Architecture: iphoneos-arm
+Author: Matt Clarke
+dev: 
+Homepage: 
+Depiction: 
+Maintainer: 
+Icon:
+Filename: debs/com.matchstic.ibkpostinst_1.0-1_iphoneos-arm.deb
+Size: 16140
+MD5sum: b626f4ad170ee77f980ae6ea1d5c6ba8
+SHA1: 110567a251c5c10d514055a1552b41d975521e4c
+SHA256: 546e82aae37f60bfac739081ca54879499fa64fbf244b090eebb29cfed963913
+
+Package: com.matchstic.iDownloadBlog
+Name: iDownloadBlog
+Version: 1.0-1
+Description: 
+Section: Addons (Curago)
+Depends: firmware (>= 7.0)
+Conflicts: 
+Replaces: 
+Priority: optional
+Architecture: iphoneos-arm
+Author: Matt Clarke
+dev: 
+Homepage: 
+Depiction: 
+Maintainer: 
+Icon:
+Filename: debs/com.matchstic.idownloadblog_1.0-1_iphoneos-arm.deb
+Size: 547766
+MD5sum: 15988322310dc9590d9b494777fa859f
+SHA1: a2753097eb9bfe3615e619c047bebdd17ddcd5ca
+SHA256: 55fd1a211b95bf1628df79dcfcc04bec0d64d13b9a7564131d912c50e10c6851
+
+Package: io.ominousness.stackxi
+Name: StackXI
+Depends: mobilesubstrate, ws.hbang.common (>= 1.11), firmware (>= 11.0), firmware (<= 11.4.1), cy+cpu.arm64
+Version: 0.5.5
+Architecture: iphoneos-arm
+Conflicts: com.ioscreatix.intelix, com.ioscreatix.intelixbeta
+Description: Grouped notifications, iOS 12 style.
+Maintainer: Nepeta <ominousness@protonmail.com>
+Author: Nepeta <ominousness@protonmail.com>
+Section: Tweaks
+Filename: debs/io.ominousness.stackxi_0.5.5_iphoneos-arm.deb
+Size: 10410
+MD5sum: 5e2ce2412d73bfb38e5efc7a85bc418b
+SHA1: f5c3ccc6e60e13785e5f883260abef17213f64a3
+SHA256: 1df4a9a24d4c7dfdb898ce0156267af336b309d424ead72ccc3bb1be1cf87773
+
+Package: me.nepeta.exo
+Name: Exo (Beta)
+Depends: mobilesubstrate, firmware (>= 11.0)
+Version: 0.1.5
+Architecture: iphoneos-arm
+Description: Information provider for WKWebView-based widgets.
+Maintainer: Nepeta
+Author: Nepeta
+Section: Tweaks
+Filename: debs/me.nepeta.exo_0.1.5_iphoneos-arm.deb
+Size: 3808
+MD5sum: 762f6612c154d7efeac7f673ccfe5964
+SHA1: bc05899852617080d384ef5dded28e9b541e39dc
+SHA256: 7e9924968102adc6cb74684d36ded08d9493268fa874d6c0a9e8267d76d0aa02
+
+Package: me.nepeta.exobar
+Name: Exobar (Beta)
+Depends: mobilesubstrate, ws.hbang.common (>= 1.11), com.rpetrich.rocketbootstrap (>= 1.0.2), me.nepeta.exo, firmware (>= 11.0)
+Version: 0.1.4
+Architecture: iphoneos-arm
+Description: HTML in status bar
+Maintainer: Nepeta
+Author: Nepeta
+Section: Tweaks
+Filename: debs/me.nepeta.exobar_0.1.4_iphoneos-arm.deb
+Size: 30816
+MD5sum: 694a5b3e3941d4992d62a06c33970ae8
+SHA1: 0b6ba1976f71133629c3414ffb152bc7ebc84be3
+SHA256: 952e9e28871562958200eeb68e78388ca395abefb0fb6be3971175262a158ce3
+
+Package: me.nepeta.launchtron.action
+Name: Launchtron Activator Action
+Version: 0.1.1
+Architecture: iphoneos-arm
+Description: Activator action for Launchtron
+Depends: mobilesubstrate, ws.hbang.common (>= 1.11), firmware (>= 9.0), libactivator, me.nepeta.launchtron
+Maintainer: Nepeta <ominousness@protonmail.com>
+Author: Nepeta <ominousness@protonmail.com>
+Section: Tweaks
+Filename: debs/me.nepeta.launchtron.action_0.1.1_iphoneos-arm.deb
+Size: 6200
+MD5sum: afe7ded67b4cf9f693905a294da30b06
+SHA1: e3f70e99b0a6097d8c20283218d8eab4db4f8f13
+SHA256: 70854a90f3f3d146a47a0a05d2617d026ce6a15d1c9e395e4c3112e132a0a1e1
+
+Package: me.nepeta.mitsuhainfinity-homescreen
+Name: Mitsuha Infinity - Home Screen
+Depends: mobilesubstrate, me.nepeta.mitsuhainfinity
+Version: 0.1.1
+Architecture: iphoneos-arm
+Description: Audio visualizer for the home screen
+Maintainer: Nepeta
+Author: Nepeta
+Section: Tweaks
+Filename: debs/me.nepeta.mitsuhainfinity-homescreen_0.1.1_iphoneos-arm.deb
+Size: 1066
+MD5sum: e0294cdd80605948077b42dfbd914982
+SHA1: b6df775d2b9b75c1f8e1c8bc1069f62d235dff82
+SHA256: 9f75be28057e9730405c377ae3c4708a88a7b4bc9346edd71f2f7effd49de62b
+
+Package: me.nepeta.mitsuhainfinity-lockscreen
+Name: Mitsuha Infinity - Lock Screen
+Depends: mobilesubstrate, me.nepeta.mitsuhainfinity
+Version: 0.1.0
+Architecture: iphoneos-arm
+Description: Audio visualizer for the lock screen
+Maintainer: Nepeta
+Author: Nepeta
+Section: Tweaks
+Filename: debs/me.nepeta.mitsuhainfinity-lockscreen_0.1.0_iphoneos-arm.deb
+Size: 1078
+MD5sum: a498d81c11df4fbf24f0ae370efbfed4
+SHA1: 7fe28e5c1d8fca731c6d4653fd03b0b1405fe739
+SHA256: cd27a9c9646c878b62117e84687b8fdfe470b5ab052207e41490487a90db420d
+
+Package: me.nepeta.nereid
+Name: Nereid
+Depends: mobilesubstrate, ws.hbang.common (>= 1.11), me.nepeta.libcolorpicker | org.thebigboss.libcolorpicker (>= 1.6.3), me.nepeta.libnepeta, firmware (>= 11.0)
+Version: 0.1.8-1
+Architecture: iphoneos-arm
+Description: Lock screen music player redesign
+Maintainer: Nepeta
+Author: Nepeta
+Section: Tweaks
+Filename: debs/me.nepeta.nereid_0.1.8-1_iphoneos-arm.deb
+Size: 27236
+MD5sum: 68a77a45f9ba9d80521f05cd676815e1
+SHA1: 18d160ae457179a8f6a1689c9844b9424a4d1010
+SHA256: 11336affd88040b8a61e96e48e84832a10c840e3b7bbd8241e87276c66917add
+
