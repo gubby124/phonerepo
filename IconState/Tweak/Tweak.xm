@@ -1,3 +1,5 @@
+#import <Foundation/Foundation.h>
+
 #define KEY @"_NepetaIconState"
 
 %hook SBDefaultIconModelStore
