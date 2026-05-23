@@ -6,16 +6,16 @@ Codename: ios
 Architectures: iphoneos-arm
 Components: main
 Description: gubby124 Sileo repository
-Date: Sat, 23 May 2026 04:26:57 GMT
+Date: Sat, 23 May 2026 04:29:21 GMT
 MD5Sum:
- ee34721b19cd9fa284e7b20ff0f32a88             8543 Packages
- 9d5c9440a9730349a29c55cada3718ea             3090 Packages.gz
- efe69076d91258d4662a2a0c68f9a2ab             3195 Packages.bz2
+ 02d852fd36ec0fc45d63abcee396b5d4             9090 Packages
+ b42e20dba579a11de1a092f3e6fb9efc             3243 Packages.gz
+ 6da11a3535ef9b82bd7cd7c6ce0db265             3333 Packages.bz2
 SHA1:
- f767ad11b58e05047eaf5e9aa13e1da4583d9f68             8543 Packages
- 0e6d646a22e8d4446a524584b3c1be837b893e1f             3090 Packages.gz
- d02774fbdaf1b6fae0a4d0758e77be8a15198a1e             3195 Packages.bz2
+ d563795943d2cc3322a1b73890302797dcb6ffae             9090 Packages
+ e75de7960650308ddce99bc3e4154e7f9479075e             3243 Packages.gz
+ 5c80150aedf4358cac3240dddd5d36d12aafe1be             3333 Packages.bz2
 SHA256:
- 23412088dc43ebb0c436375e3d06cb1d02bd8af4c5466d2718cbb2e30a09d4b4             8543 Packages
- 4327059392d3544efc8e4bd318a16f3f247bcda6cb15f6a49248398c816b4ebb             3090 Packages.gz
- 4dec91fb1437ce980d9db0af7835aad212e43b9797de5cb1835adabdc67e6e01             3195 Packages.bz2
+ 1d292a68158447dd0ee4bd9156206a4671b1e38bfd5a7ecfe3a424d76c3fe254             9090 Packages
+ d5b7a11ecf6c5ffb11814f92a82910b2dfb215369b1f13859f29ee50d77bc5bc             3243 Packages.gz
+ 88698bb53bc378996f93aa6423fc691752764c2b1c5659e801998a39c6ac05fa             3333 Packages.bz2

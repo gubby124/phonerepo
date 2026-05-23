@@ -157,10 +157,10 @@ Architecture: iphoneos-arm
 Version: 0.1.0
 Installed-Size: 172
 Filename: debs/me.nepeta.docky_0.1.0_iphoneos-arm.deb
-Size: 32558
-MD5sum: cadd9e13dd1e8a68649ae24897fe6add
-SHA1: 533b90c1143c219767e5962b8680b41f12541429
-SHA256: f11eb276500456d356b8ed1f5e7846297d2c94af45c9161f1125a1bf99ca42bd
+Size: 32556
+MD5sum: fef6bef96dd770d28b31a715642bd99c
+SHA1: 82cb31f0e12372cae390081ee5184706737fcc48
+SHA256: 7d64fc7755fe971b97868b90a50675cf207886140d01ef9a53845896fc6de117
 
 Package: me.nepeta.exo
 Name: Exo (Beta)
@@ -191,6 +191,22 @@ Size: 30816
 MD5sum: 694a5b3e3941d4992d62a06c33970ae8
 SHA1: 0b6ba1976f71133629c3414ffb152bc7ebc84be3
 SHA256: 952e9e28871562958200eeb68e78388ca395abefb0fb6be3971175262a158ce3
+
+Package: me.nepeta.iconstate
+Name: IconState
+Depends: mobilesubstrate, firmware (>= 9.0)
+Description: Preserve custom icon layouts between reboots
+Maintainer: Nepeta <ominousness@protonmail.com>
+Author: Nepeta <ominousness@protonmail.com>
+Section: Tweaks
+Architecture: iphoneos-arm
+Version: 0.1.0
+Installed-Size: 56
+Filename: debs/me.nepeta.iconstate_0.1.0_iphoneos-arm.deb
+Size: 2926
+MD5sum: 475f76ba3badeedf656deab87d4925a8
+SHA1: 170b0853dcbdd63344e02f4d4d91e56b91c84011
+SHA256: bcdb58c7505a5307ea6a4b763e0de3192699180188fcd5af6a48dc521b7e84cd
 
 Package: me.nepeta.launchtron.action
 Name: Launchtron Activator Action

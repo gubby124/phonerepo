@@ -7,22 +7,11 @@
 [1;31m> [1;3;39mMaking all for tweak IconState…[m
 [0;31m==> [1;39mPreprocessing Tweak.xm…[m
 [0;32m==> [1;39mCompiling Tweak.xm (arm64)…[m
-[1mTweak.xm:6:5: [0m[0;1;31merror: [0m[1munknown type name 'NSUserDefaults'[0m
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-[0;1;32m    ^
-[0m[1mTweak.xm:6:33: [0m[0;1;31merror: [0m[1muse of undeclared identifier 'NSUserDefaults'[0m
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-[0;1;32m                                ^
-[0m[1mTweak.xm:17:5: [0m[0;1;31merror: [0m[1munknown type name 'NSUserDefaults'[0m
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-[0;1;32m    ^
-[0m[1mTweak.xm:17:33: [0m[0;1;31merror: [0m[1muse of undeclared identifier 'NSUserDefaults'[0m
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-[0;1;32m                                ^
-[0m4 errors generated.
-make[4]: *** [/Users/runner/work/phonerepo/phonerepo/IconState/.theos/obj/arm64/Tweak.xm.434c6753.o] Error 1
-rm /Users/runner/work/phonerepo/phonerepo/IconState/.theos/obj/arm64/Tweak.xm.mm
-make[3]: *** [/Users/runner/work/phonerepo/phonerepo/IconState/.theos/obj/arm64/IconState.dylib] Error 2
-make[2]: *** [internal-library-all_] Error 2
-make[1]: *** [IconState.all.tweak.variables] Error 2
-make: *** [internal-all] Error 2
+[0;33m==> [1;39mLinking tweak IconState (arm64)…[m
+ld: warning: -multiply_defined is obsolete
+[0;34m==> [1;39mGenerating debug symbols for IconState…[m
+[0;34m==> [1;39mStripping IconState (arm64)…[m
+[0;34m==> [1;39mSigning IconState…[m
+[1;31m> [1;3;39mMaking stage in Tweak…[m
+[1;31m> [1;3;39mMaking stage for tweak IconState…[m
+dm.pl: building package `me.nepeta.iconstate:iphoneos-arm' in `./packages/me.nepeta.iconstate_0.1.0_iphoneos-arm.deb'
