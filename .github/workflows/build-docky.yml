@@ -33,6 +33,8 @@ jobs:
           git clone --recursive https://github.com/theos/theos.git "$THEOS"
           mkdir -p "$THEOS/sdks"
           curl -L "https://github.com/theos/sdks/releases/latest/download/iPhoneOS16.5.sdk.tar.xz" | tar -xJ -C "$THEOS/sdks"
+          mkdir -p "$THEOS/sdks/iPhoneOS16.5.sdk/System/Library/PrivateFrameworks/Preferences.framework"
+          cp "iOS-Blocks/Settings/curago/curago/Preferences.tbd" "$THEOS/sdks/iPhoneOS16.5.sdk/System/Library/PrivateFrameworks/Preferences.framework/Preferences.tbd"
           echo "THEOS=$THEOS" >> "$GITHUB_ENV"
 
       - name: Build Docky package
@@ -42,7 +44,7 @@ jobs:
           set +e
           export THEOS="$HOME/theos"
           make clean 2>&1 | tee ../docky-build.log
-          make package FINALPACKAGE=1 TARGET=iphone:clang:latest:11.0 2>&1 | tee -a ../docky-build.log
+          make package FINALPACKAGE=1 TARGET=iphone:clang:latest:11.0 ARCHS=arm64 2>&1 | tee -a ../docky-build.log
           status=${PIPESTATUS[0]}
           echo "status=$status" >> "$GITHUB_OUTPUT"
           exit 0
